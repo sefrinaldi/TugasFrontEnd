@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script defer src="./list.js"></script>
+    <style>
+      table {
+        margin-top: 10px;
+      }
+
+      div.pagination {
+        display: flex;
+        width: 500px;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+      }
+
+      div.pagination span {
+        padding: 5px 10px;
+        border: 1px solid grey;
+        margin-right: 10px;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      div.pagination span:last-child {
+        margin-right: 0;
+      }
+
+      div.pagination span.active {
+        background-color: gray;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="addRow()">Add New</button>
+    <input type="text" name="search" onkeyup="filterRow(this)" />
+    <table width="500px" border="1" cellpadding="5px">
+      <thead>
+        <tr>
+          <th width="30px">No</th>
+          <th>Name</th>
+          <th>Gender</th>
+          <th>Address</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <div class="pagination"></div>
+  </body>
+</html>
